@@ -53,7 +53,9 @@ const Navbar = () => {
             {navLink}
           </ul>
         </div>
-        <a className="text-xl"><img className=" w-[200px]" src={logo} alt="" /></a>
+        <a data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000" className="text-xl"><img className=" w-[200px]" src={logo} alt="" /></a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="text-white text-lg menu menu-horizontal px-1">
@@ -61,7 +63,10 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn  bg-orange-500 border-none text-xl text-white ">Login</a>
+        <a data-aos="fade-left"
+     data-aos-easing="ease-in-back"
+     data-aos-delay="300"
+     data-aos-offset="0" className="btn  bg-orange-500 border-none text-xl text-white ">Login</a>
       </div>
     </div>
   );

@@ -12,7 +12,14 @@ const Banner = () => {
     return (
         <>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-          <SwiperSlide id='slide1'><div className='flex justify-center h-full items-center'>
+          <SwiperSlide id='slide1'><div     data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="true"
+    data-aos-anchor-placement="top-center" className='flex justify-center h-full items-center'>
                 <div className=' border-l-4 pl-6 border-orange-500' style={{zIndex: 1}}>
                     <p className=' text-slate-200 font-semibold pb-5'>Welcome To Prime Property</p>
                 <h1 className=' font-semibold text-white text-6xl ' >Discover Your<br /> Dream <span className=' text-orange-400'>Home</span></h1>
