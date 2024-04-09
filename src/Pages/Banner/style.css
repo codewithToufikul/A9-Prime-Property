@@ -1,0 +1,93 @@
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+    border-radius: 0px 0px 15px 15px;
+  }
+  
+  #slide1{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../assets/banner1.jpg');
+    background-size: cover;
+    background-position: top;
+    border-radius: 0px 0px 15px 15px;
+  }
+  #slide2{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../assets/banner2.jpg');
+    background-size: cover;
+    background-position: top;
+    border-radius: 0px 0px 15px 15px;
+  }
+  #slide3{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../assets/banner3.jpg');
+    background-size: cover;
+    background-position: top;
+    border-radius: 0px 0px 15px 15px;
+  }
+  #slide4{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../assets/banner4.jpg');
+    background-size: cover;
+    background-position: top;
+    border-radius: 0px 0px 15px 15px;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @media screen and (max-width: 768px){
+    #slide1{
+        width: 100%;
+        height: 500px;
+        background-image: url('../../assets/banner1.jpg');
+        background-size: cover;
+        background-position: bottom;
+        border-radius: 0px 0px 15px 15px;
+
+      }
+      #slide2{
+        width: 100%;
+        height: 500px;
+        background-image: url('../../assets/banner2.jpg');
+        background-size: cover;
+        background-position: bottom;
+        border-radius: 0px 0px 15px 15px;
+      }
+      #slide3{
+        width: 100%;
+        height: 500px;
+        background-image: url('../../assets/banner3.jpg');
+        background-size: cover;
+        background-position: bottom;
+        border-radius: 0px 0px 15px 15px;
+      }
+      #slide4{
+        width: 100%;
+        height: 500px;
+        background-image: url('../../assets/banner4.jpg');
+        background-size: cover;
+        background-position: bottom;
+        border-radius: 0px 0px 15px 15px;
+      }
+  }
