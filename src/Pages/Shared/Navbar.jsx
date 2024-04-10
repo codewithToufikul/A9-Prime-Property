@@ -5,21 +5,21 @@ const Navbar = () => {
     const navLink = <>
         <li><NavLink className={({ isActive, isPending }) =>
                       isActive
-                        ? " text-orange-500 bg-transparent font-bold"
+                        ? " text-orange-500 border-2 bg-transparent font-bold"
                         : isPending
                         ? "pending"
                         : ""
                     } to="/">Home</NavLink></li> 
         <li><NavLink className={({ isActive, isPending }) =>
                       isActive
-                        ? "text-orange-500 bg-transparent font-bold"
+                        ? "text-orange-500 border-2 bg-transparent font-bold"
                         : isPending
                         ? "pending"
                         : ""
                     } to="/update">Update Profile</NavLink></li> 
         <li><NavLink className={({ isActive, isPending }) =>
                       isActive
-                        ? "text-orange-500 bg-transparent font-bold"
+                        ? "text-orange-500 border-2 bg-transparent font-bold"
                         : isPending
                         ? "pending"
                         : ""
@@ -48,7 +48,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content text-white mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content  mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navLink}
           </ul>
@@ -58,7 +58,7 @@ const Navbar = () => {
      data-aos-duration="2000" className="text-xl"><img className=" w-[200px]" src={logo} alt="" /></a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="text-white text-lg menu menu-horizontal px-1">
+        <ul className="text-rose-300 text-lg menu menu-horizontal px-1">
           {navLink}
         </ul>
       </div>

@@ -2,12 +2,14 @@
 import Banner from "../Banner/Banner";
 import Navbar from "../Shared/Navbar";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css';
 import SomeProperty from "../SomeProperty/SomeProperty";
-// ..
+import { useLoaderData } from "react-router-dom";
+import Property from "../Property/Property";
 AOS.init();
 
 const Home = () => {
+    const propertys = useLoaderData();
     return (
         <div className="">
             <div className="relative">
@@ -17,6 +19,14 @@ const Home = () => {
             <Banner></Banner>
         </div>
         <SomeProperty></SomeProperty>
+        <div className=" max-w-[1440px] mx-auto mt-20">
+            <h1 className=" text-5xl text-center mb-14">Select <span className=" font-semibold text-orange-400">Home</span></h1>
+        <div className=" grid grid-cols-3 gap-8">
+        {
+            propertys.map(property => <Property key={property.id} property={property}></Property>)
+        }
+        </div>
+        </div>
         </div>
     );
 };

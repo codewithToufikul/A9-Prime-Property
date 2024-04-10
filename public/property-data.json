@@ -1,0 +1,111 @@
+[
+    {
+      "estate_title": "Modern Single-Family Home with Stunning Views",
+      "id": 1,
+      "segment_name": "Single-family homes",
+      "description": "This contemporary single-family home offers panoramic views of the city skyline. Featuring spacious living areas, a gourmet kitchen, and a landscaped backyard with a pool.",
+      "price": "$950,000",
+      "status": "sale",
+      "area": "3,500 sq ft",
+      "location": "1234 Oak Street, Cityville",
+      "facilities": ["living room", "swimming pool", "kitchen"],
+      "image": "https://i.ibb.co/dtsc4yH/ghue.webp"
+    },
+    {
+      "estate_title": "Luxurious Townhouse in Historic District",
+      "id": 2,
+      "segment_name": "Townhouses",
+      "description": "Elegant townhouse located in the heart of the historic district. This three-story home boasts high ceilings, hardwood floors, and a private courtyard. Walking distance to shops and restaurants.",
+      "price": "$750,000",
+      "status": "sale",
+      "area": "2,200 sq ft",
+      "location": "567 Maple Avenue, Townsville",
+      "facilities": ["living room", "kitchen", "courtyard"],
+      "image": "https://i.ibb.co/C6BpQBm/terrah-holly-pmhdkg-RCbt-E-unsplash-1.jpg"
+    },
+    {
+      "estate_title": "Modern Urban Apartment with City Views",
+      "id": 3,
+      "segment_name": "Apartments",
+      "description": "Sleek apartment in a high-rise building offering breathtaking city views. Features include floor-to-ceiling windows, stainless steel appliances, and access to a rooftop terrace.",
+      "price": "$3,000/month",
+      "status": "rent",
+      "area": "1,000 sq ft",
+      "location": "789 Pine Street, Metropolis",
+      "facilities": ["living room", "rooftop terrace", "gym"],
+      "image": "https://i.ibb.co/CsWTqJQ/luke-van-zyl-ko-H7-IVuw-RLw-unsplash.jpg"
+    },
+    {
+      "estate_title": "Student Housing Near University Campus",
+      "id": 4,
+      "segment_name": "Student housing",
+      "description": "Convenient student housing located within walking distance to the university campus. Fully furnished apartments with modern amenities, study areas, and communal lounges.",
+      "price": "$800/month per room",
+      "status": "rent",
+      "area": "600 sq ft (per room)",
+      "location": "101 College Avenue, Collegeland",
+      "facilities": ["living room", "study area", "laundry room"],
+      "image": "https://i.ibb.co/82zFvkp/gpg-1.webp"
+    },
+    {
+      "estate_title": "Senior Living Community with Resort Amenities",
+      "id": 5,
+      "segment_name": "Senior living communities",
+      "description": "Retirement community offering resort-style living for active seniors. Amenities include a clubhouse, fitness center, walking trails, and scheduled activities.",
+      "price": "$4,500/month",
+      "status": "rent",
+      "area": "1,200 sq ft",
+      "location": "222 Sunset Boulevard, Serenity Village",
+      "facilities": ["living room", "clubhouse", "fitness center"],
+      "image": "https://i.ibb.co/RNwP0YW/gus-ruballo-h5-QNcl-JUi-A8-unsplash.jpg"
+    },
+    {
+      "estate_title": "Beachfront Vacation Rental with Private Beach Access",
+      "id": 6,
+      "segment_name": "Vacation rentals",
+      "description": "Escape to this beachfront retreat with direct access to a private beach. This vacation rental features spacious accommodations, a fully equipped kitchen, and a patio with ocean views.",
+      "price": "$300/night",
+      "status": "rent",
+      "area": "1,800 sq ft",
+      "location": "444 Ocean Drive, Seaside Haven",
+      "facilities": ["living room", "private beach access", "patio"],
+      "image": "https://i.ibb.co/4VTRxvr/imajiges.jpg"
+    },
+    {
+      "estate_title": "Charming Family Home with Garden Oasis",
+      "id": 7,
+      "segment_name": "Single-family homes",
+      "description": "Quaint single-family home nestled in a peaceful neighborhood. Enjoy the lush garden oasis with mature trees, a pond, and a pergola-covered patio.",
+      "price": "$650,000",
+      "status": "sale",
+      "area": "2,000 sq ft",
+      "location": "555 Elm Street, Garden Grove",
+      "facilities": ["living room", "garden", "patio"],
+      "image": "https://i.ibb.co/7vS532F/aab.jpg"
+    },
+    {
+      "estate_title": "Cozy Townhouse in Quaint Suburb",
+      "id": 8,
+      "segment_name": "Townhouses",
+      "description": "Inviting townhouse located in a charming suburb. Features include a renovated kitchen, hardwood floors, and a fenced backyard perfect for pets.",
+      "price": "$500,000",
+      "status": "sale",
+      "area": "1,600 sq ft",
+      "location": "777 Willow Lane, Suburbia",
+      "facilities": ["living room", "kitchen", "backyard"],
+      "image": "https://i.ibb.co/sQ8Z0MD/istockphoto-1415886888-612x612.jpg"
+    },
+    {
+      "estate_title": "Spacious Apartment in Trendy Neighborhood",
+      "id": 9,
+      "segment_name": "Apartments",
+      "description": "Large apartment situated in a vibrant neighborhood with trendy cafes and boutiques. The unit boasts modern finishes, ample storage, and a balcony for outdoor relaxation.",
+      "price": "$2,200/month",
+      "status": "rent",
+      "area": "1,400 sq ft",
+      "location": "888 Main Street, Hipsterville",
+      "facilities": ["living room", "balcony", "storage"],
+      "image": "https://i.ibb.co/2jJThCt/aertert-cwkre.webp"
+    }
+  ]
+  
