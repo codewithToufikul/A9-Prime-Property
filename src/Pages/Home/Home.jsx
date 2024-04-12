@@ -21,7 +21,7 @@ const Home = () => {
         <SomeProperty></SomeProperty>
         <div className=" max-w-[1440px] mx-auto mt-20">
             <h1 className=" text-5xl text-center mb-14">Select <span className=" font-semibold text-orange-400">Home</span></h1>
-        <div className=" grid grid-cols-3 gap-8">
+        <div className=" grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-8">
         {
             propertys.map(property => <Property key={property.id} property={property}></Property>)
         }

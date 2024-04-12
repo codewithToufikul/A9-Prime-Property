@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from '../../assets/logo1.png'
 
 const Navbar = () => {
@@ -66,7 +66,7 @@ const Navbar = () => {
         <a data-aos="fade-left"
      data-aos-easing="ease-in-back"
      data-aos-delay="300"
-     data-aos-offset="0" className="btn  bg-orange-500 border-none text-xl text-white ">Login</a>
+     data-aos-offset="0" className="btn  bg-orange-500 border-none text-xl text-white "><Link to="/login">Login</Link></a>
       </div>
     </div>
   );
