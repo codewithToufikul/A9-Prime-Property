@@ -4,9 +4,12 @@ import { Link } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../Provider/AuthProvider";
+import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const {loginUser, googleLogin} = useContext(AuthContext);
+  const {loginUser, googleLogin, githubLogin} = useContext(AuthContext);
     useEffect(()=>{
         document.title= 'Login'
     },[])
@@ -28,9 +31,19 @@ const Login = () => {
     const handleGoogleLogin = () =>{
       googleLogin()
       .then(result=>{
+        toast.success("Login Success");
       })
       .catch(error=>{
         console.error(error);
+      })
+    }
+    const handleGithubLogin = () =>{
+      githubLogin()
+      .then(result=>{
+        toast.success("Login Success");
+      })
+      .catch(result=>{
+
       })
     }
   return (
@@ -81,7 +94,7 @@ const Login = () => {
                 </div>
                 <p className="  btn border-none rounded-none">Google</p>
             </button>
-            <button className=" flex">
+            <button onClick={handleGithubLogin} className=" flex">
                 <div>
                 <p className=" p-4 bg-slate-600 text-white"><FaGithub /></p>
                 </div>
@@ -90,7 +103,7 @@ const Login = () => {
         </div>
         <p className=" mt-6 text-base text-center">Don't have an account ! <Link to="/register" className=" text-orange-500">Register here...</Link></p>
       </div>
-     
+      <ToastContainer />
     </div>
   );
 };
