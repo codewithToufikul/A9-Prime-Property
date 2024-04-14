@@ -82,10 +82,18 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {
-          user ? <a onClick={handleLogOut} data-aos="fade-left"
-          data-aos-easing="ease-in-back"
-          data-aos-delay="300"
-          data-aos-offset="0" className="btn  bg-orange-500 border-none text-xl text-white "><Link >LogOut</Link></a> : <a data-aos="fade-left"
+          user ? <div className="dropdown dropdown-end">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+            <div className="w-full rounded-full">
+              <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+            </div>
+          </div>
+          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            
+            <li className=" flex justify-center font-bold text-orange-400 text-xl"><a>{user.displayName}</a></li>
+            <li onClick={handleLogOut}><a>Logout</a></li>
+          </ul>
+          </div> : <a data-aos="fade-left"
           data-aos-easing="ease-in-back"
           data-aos-delay="300"
           data-aos-offset="0" className="btn  bg-orange-500 border-none text-xl text-white "><Link to="/login">Login</Link></a>
