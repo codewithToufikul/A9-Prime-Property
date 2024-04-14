@@ -1,9 +1,13 @@
 import Navbar from "../Shared/Navbar";
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaPhone } from "react-icons/fa6";
+import { useEffect } from "react";
 
 
 const PropertyDetails = () => {
+    useEffect(()=>{
+        document.title= 'Property Details'
+    },[])
     const { id } = useParams();
     const propertys = useLoaderData();
     const property = propertys.find(property => property.id == id);

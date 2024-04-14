@@ -3,7 +3,6 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaChartArea } from "react-icons/fa";
 
 const Property = ({property}) => {
-    console.log(property);
     const {id, estate_title, segment_name, description, price, status, area, location, facilities, image} = property;
   return (
     <div className="card card-compact bg-base-100 shadow-xl" data-aos="fade-left" data-aos-delay="300">

@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom';
 import error from '../assets/404.png'
+import { useEffect } from 'react';
 const ErrorPage = () => {
+    useEffect(()=>{
+        document.title= 'page not found'
+    },[])
     return (
         <div className=' flex justify-center items-center flex-col'>
 

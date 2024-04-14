@@ -1,7 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from '../../assets/logo1.png'
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+  const {user, logOutUser} = useContext(AuthContext);
     const navLink = <>
         <li><NavLink className={({ isActive, isPending }) =>
                       isActive
@@ -24,8 +27,23 @@ const Navbar = () => {
                         ? "pending"
                         : ""
                     } to="user">User Profile</NavLink></li>
+        <li><NavLink className={({ isActive, isPending }) =>
+                      isActive
+                        ? "text-orange-500 border-2 bg-transparent font-bold"
+                        : isPending
+                        ? "pending"
+                        : ""
+                    } to="/about">About Us</NavLink></li>
     
     </>
+    const handleLogOut = () =>{
+      logOutUser()
+      .then(() => {
+        // Sign-out successful.
+      }).catch((error) => {
+        // An error happened.
+      });
+    }
   return (
     <div className="navbar bg-transparent absolute z-10 md:px-8 glass rounded-b-lg">
       <div className="navbar-start">
@@ -63,10 +81,15 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a data-aos="fade-left"
-     data-aos-easing="ease-in-back"
-     data-aos-delay="300"
-     data-aos-offset="0" className="btn  bg-orange-500 border-none text-xl text-white "><Link to="/login">Login</Link></a>
+        {
+          user ? <a onClick={handleLogOut} data-aos="fade-left"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0" className="btn  bg-orange-500 border-none text-xl text-white "><Link >LogOut</Link></a> : <a data-aos="fade-left"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0" className="btn  bg-orange-500 border-none text-xl text-white "><Link to="/login">Login</Link></a>
+        }
       </div>
     </div>
   );

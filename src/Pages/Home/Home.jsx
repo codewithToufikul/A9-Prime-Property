@@ -6,9 +6,14 @@ import 'aos/dist/aos.css';
 import SomeProperty from "../SomeProperty/SomeProperty";
 import { useLoaderData } from "react-router-dom";
 import Property from "../Property/Property";
+import Footer from "../Footer/Footer";
+import { useEffect } from "react";
 AOS.init();
 
 const Home = () => {
+    useEffect(()=>{
+        document.title= 'Home'
+    },[])
     const propertys = useLoaderData();
     return (
         <div className="">
@@ -26,6 +31,9 @@ const Home = () => {
             propertys.map(property => <Property key={property.id} property={property}></Property>)
         }
         </div>
+        </div>
+        <div className=" mt-10">
+            <Footer></Footer>
         </div>
         </div>
     );
