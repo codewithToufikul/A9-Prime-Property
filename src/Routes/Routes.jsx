@@ -8,6 +8,7 @@ import PropertyDetails from "../Pages/PropertyDetails/PropertyDetails";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import About from "../Pages/About/About";
+import PrivetRoute from "../Pages/PrivetRoute/PrivetRoute";
 
 
   const router = createBrowserRouter([
@@ -24,7 +25,7 @@ import About from "../Pages/About/About";
         {
           path: "/details/:id",
           loader: ()=> fetch('/property-data.json'),
-          element: <PropertyDetails></PropertyDetails>,
+          element: <PrivetRoute><PropertyDetails></PropertyDetails></PrivetRoute>,
         },
         {
           path: "/login",
@@ -36,7 +37,7 @@ import About from "../Pages/About/About";
         },
         {
           path: "/about",
-          element: <About></About>,
+          element: <PrivetRoute><About></About></PrivetRoute>,
         }
       ]
     },

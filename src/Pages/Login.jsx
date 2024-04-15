@@ -4,12 +4,17 @@ import { Link } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../Provider/AuthProvider";
-import React from "react";
+import 'animate.css';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const {loginUser, googleLogin, githubLogin} = useContext(AuthContext);
+  const location = useLocation();
+  const navigete = useNavigate()
+  console.log(location);
     useEffect(()=>{
         document.title= 'Login'
     },[])
@@ -22,7 +27,8 @@ const Login = () => {
     const onSubmit = (data) => {
       loginUser(data.email, data.password)
       .then(result=>{
-        console.log(result.user);
+        navigete(location?.state ? location.state : '/')
+        toast.success("Login Success");
       })
       .catch(error=>{
         console.error(error);
@@ -31,6 +37,7 @@ const Login = () => {
     const handleGoogleLogin = () =>{
       googleLogin()
       .then(result=>{
+        navigete(location?.state ? location.state : '/')
         toast.success("Login Success");
       })
       .catch(error=>{
@@ -40,6 +47,7 @@ const Login = () => {
     const handleGithubLogin = () =>{
       githubLogin()
       .then(result=>{
+        navigete(location?.state ? location.state : '/')
         toast.success("Login Success");
       })
       .catch(result=>{
@@ -55,7 +63,7 @@ const Login = () => {
       <div className=" max-w-[600px] m-auto glass p-10 md:mt-[100px] lg:mt[300px]">
         
       <form onSubmit={handleSubmit(onSubmit)} className="card-body p-0">
-            <h1 className=" text-center text-4xl font-medium">Please <span className=" text-orange-500">Login</span></h1>
+            <h1 className="animate__animated animate__bounce text-center text-4xl font-medium">Please <span className=" text-orange-500">Login</span></h1>
         <div className="form-control">
           <label className="label text-lg">
             Email
@@ -74,11 +82,10 @@ const Login = () => {
             <input type="checkbox" name="check" id="" />
             <p className="">Remember Me!</p>
             </div>
-            <a href="" className="  underline">Forgot password?</a>
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn bg-orange-500 border-none text-xl text-white">Login</button>
+          <button className="animate__animated animate__flipInX btn bg-orange-500 border-none text-xl text-white">Login</button>
         </div>
         <div className=" grid grid-cols-3 items-center my-5">
             <hr className=" grid-cols-1" />

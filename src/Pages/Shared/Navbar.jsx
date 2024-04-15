@@ -8,31 +8,31 @@ const Navbar = () => {
     const navLink = <>
         <li><NavLink className={({ isActive, isPending }) =>
                       isActive
-                        ? " text-orange-500 border-2 bg-transparent font-bold"
+                        ? " text-orange-500 border-2 border-orange-500 mr-3 font-bold shadow-xl"
                         : isPending
                         ? "pending"
-                        : ""
+                        : "border-2 mr-3 "
                     } to="/">Home</NavLink></li> 
         <li><NavLink className={({ isActive, isPending }) =>
                       isActive
-                        ? "text-orange-500 border-2 bg-transparent font-bold"
+                        ? "text-orange-500 border-2 mr-3 border-orange-500 bg-transparent font-bold shadow-xl"
                         : isPending
                         ? "pending"
-                        : ""
+                        : "border-2 mr-3"
                     } to="/update">Update Profile</NavLink></li> 
         <li><NavLink className={({ isActive, isPending }) =>
                       isActive
-                        ? "text-orange-500 border-2 bg-transparent font-bold"
+                        ? "text-orange-500 border-2 mr-3 border-orange-500 bg-transparent font-bold shadow-xl"
                         : isPending
                         ? "pending"
-                        : ""
+                        : "border-2 mr-3"
                     } to="user">User Profile</NavLink></li>
         <li><NavLink className={({ isActive, isPending }) =>
                       isActive
-                        ? "text-orange-500 border-2 bg-transparent font-bold"
+                        ? "text-orange-500 border-2 mr-3 border-orange-500 bg-transparent font-bold shadow-xl"
                         : isPending
                         ? "pending"
-                        : ""
+                        : "border-2 mr-3"
                     } to="/about">About Us</NavLink></li>
     
     </>
@@ -82,21 +82,28 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {
-          user ? <div className="dropdown dropdown-end">
+          user ? <div className=" flex items-center gap-2">
+            <div className="dropdown dropdown-hover flex justify-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-            <div className="w-full rounded-full">
+            <div className="w-full  rounded-full border-2 border-orange-400">
               <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
             </div>
           </div>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <ul tabIndex={0} className="dropdown-content top-14 right-0 mg:top-12 md:right-0 z-[1] menu shadow bg-base-100 rounded-box w-32 md:w-52">
             
-            <li className=" flex justify-center font-bold text-orange-400 text-xl"><a>{user.displayName}</a></li>
-            <li onClick={handleLogOut}><a>Logout</a></li>
+            <li className=" flex justify-center font-bold text-orange-400 md:text-xl">{user.displayName}</li>
+            
           </ul>
-          </div> : <a data-aos="fade-left"
+          </div>
+          <a onClick={handleLogOut} data-aos="fade-left"
           data-aos-easing="ease-in-back"
           data-aos-delay="300"
-          data-aos-offset="0" className="btn  bg-orange-500 border-none text-xl text-white "><Link to="/login">Login</Link></a>
+          data-aos-offset="0" className="btn  bg-orange-500 border-none text-lg md:text-xl text-white "><Link >LogOut</Link></a>
+          </div> 
+          : <a data-aos="fade-left"
+          data-aos-easing="ease-in-back"
+          data-aos-delay="300"
+          data-aos-offset="0" className="btn  bg-orange-500 border-none text-lg md:text-xl text-white "><Link to="/login">Login</Link></a>
         }
       </div>
     </div>
