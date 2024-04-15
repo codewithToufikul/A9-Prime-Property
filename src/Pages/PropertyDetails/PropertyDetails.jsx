@@ -2,6 +2,7 @@ import Navbar from "../Shared/Navbar";
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaPhone } from "react-icons/fa6";
 import { useEffect } from "react";
+import Footer from "../Footer/Footer";
 
 
 const PropertyDetails = () => {
@@ -39,6 +40,7 @@ const PropertyDetails = () => {
             </div>
             
             </div>
+            <Footer></Footer>
         </div>
     );
 };

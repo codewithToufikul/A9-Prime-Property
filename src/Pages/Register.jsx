@@ -9,7 +9,7 @@ import { FaEyeSlash } from "react-icons/fa6";
 
 const Register = () => {
   const [passError, setPassError] = useState('')
-  const {creatUser} = useContext(AuthContext);
+  const {creatUser, updateUser} = useContext(AuthContext);
   const [show, setShow] = useState(false);
     useEffect(()=>{
         document.title= 'Register'
@@ -22,6 +22,7 @@ const Register = () => {
     } = useForm()
   
     const onSubmit = (data) => {
+      console.log(data);
       if(data.password.length <= 6){
         setPassError('please provide more then 6 character password');
         return;
@@ -37,7 +38,12 @@ const Register = () => {
       creatUser(data.email, data.password)
       .then(result=>{
         setPassError('')
-        console.log(result.user);
+        updateUser(data.fullName, data.photoUrl)
+        .then(() => {
+
+        }).catch((error) => {
+          console.error(error);
+        });
       })
       .catch(error=>{
         console.error(error);
