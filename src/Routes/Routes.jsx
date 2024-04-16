@@ -42,7 +42,7 @@ import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
         },
         {
           path: "/update",
-          element: <UpdateProfile></UpdateProfile>
+          element: <PrivetRoute><UpdateProfile></UpdateProfile></PrivetRoute>
         }
       ]
     },
