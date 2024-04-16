@@ -1,7 +1,7 @@
 import Navbar from "./Shared/Navbar";
 import { FaGoogle, FaGithub  } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../Provider/AuthProvider";
 import 'animate.css';
@@ -9,12 +9,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa6";
 
 const Login = () => {
   const {loginUser, googleLogin, githubLogin} = useContext(AuthContext);
   const location = useLocation();
-  const navigete = useNavigate()
-  console.log(location);
+  const [show, setShow] = useState(false);
+  const navigete = useNavigate();
     useEffect(()=>{
         document.title= 'Login'
     },[])
@@ -26,19 +28,27 @@ const Login = () => {
   
     const onSubmit = (data) => {
       loginUser(data.email, data.password)
-      .then(result=>{
+
+      .then(()=>{
         navigete(location?.state ? location.state : '/')
-        toast.success("Login Success");
+        toast.success("Login Success",{
+          position: "top-center",
+        });
       })
       .catch(error=>{
-        console.error(error);
+        console.log(error);
+        toast.error(`${error.message}`, {
+          position: "top-center",
+        });
       })
     }
     const handleGoogleLogin = () =>{
       googleLogin()
-      .then(result=>{
+      .then(()=>{
         navigete(location?.state ? location.state : '/')
-        toast.success("Login Success");
+        toast.success("Login Success",{
+          position: "top-center",
+        });
       })
       .catch(error=>{
         console.error(error);
@@ -46,13 +56,20 @@ const Login = () => {
     }
     const handleGithubLogin = () =>{
       githubLogin()
-      .then(result=>{
-        navigete(location?.state ? location.state : '/')
-        toast.success("Login Success");
+      .then(()=>{
+        navigete(location?.state ? location.state : '')
+        toast.success("Login Success",{
+          position: "top-center",
+        });
       })
-      .catch(result=>{
-
+      .catch((error)=>{
+        toast.error(error.massage, {
+          position: "top-center",
+        });
       })
+    }
+    const handlePasswordShow = () =>{
+      setShow(!show)
     }
   return (
     <div className=" min-h-screen">
@@ -75,7 +92,11 @@ const Login = () => {
           <label className="label text-lg">
             Password
           </label>
-          <input {...register("password", { required: true })} type="password" placeholder="password" className="input input-bordered"  />
+          <div className=" relative">
+          <input type={show ? 'password' : 'text'} placeholder="Password" className=" w-full input input-bordered" {...register("password", { required: true })} />
+                <p onClick={handlePasswordShow} className={`absolute top-3 right-3 text-2xl ${show ? 'hidden' : ''}`}><FaEye /></p>
+                <p onClick={handlePasswordShow} className={`absolute top-3 right-3 text-2xl ${!show ? 'hidden' : ''}`}><FaEyeSlash /></p>
+          </div>
           {errors.password && <span>This field is required</span>}
           <label className="label">
             <div className=" flex items-center gap-1">
@@ -108,7 +129,7 @@ const Login = () => {
                 <p className="  btn border-none rounded-none">GitHub</p>
             </button>
         </div>
-        <p className=" mt-6 text-base text-center">Don't have an account ! <Link to="/register" className=" text-orange-500">Register here...</Link></p>
+        <p className=" mt-6 text-base text-center">Don`t have an account ! <Link to="/register" className=" text-orange-500">Register here...</Link></p>
       </div>
       <ToastContainer />
     </div>

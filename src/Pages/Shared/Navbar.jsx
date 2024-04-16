@@ -13,6 +13,13 @@ const Navbar = () => {
                         ? "pending"
                         : "border-2 mr-3 "
                     } to="/">Home</NavLink></li> 
+        <li><NavLink className={({ isActive, isPending }) =>
+                      isActive
+                        ? " text-orange-500 border-2 border-orange-500 border-b-4 border-0 mr-3 font-bold shadow-xl"
+                        : isPending
+                        ? "pending"
+                        : "border-2 mr-3 "
+                    } to="/blog">Blog</NavLink></li> 
         {
           user ? <li><NavLink className={({ isActive, isPending }) =>
           isActive

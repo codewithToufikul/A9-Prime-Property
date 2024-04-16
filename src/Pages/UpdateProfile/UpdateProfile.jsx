@@ -7,6 +7,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 const UpdateProfile = () => {
     const {updateUser, user} = useContext(AuthContext);
     useEffect(()=>{

@@ -11,6 +11,7 @@ import About from "../Pages/About/About";
 import PrivetRoute from "../Pages/PrivetRoute/PrivetRoute";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Profile from "../Pages/Profile/Profile";
+import Blogs from "../Pages/Blogs/Blogs";
 
 
   const router = createBrowserRouter([
@@ -39,7 +40,7 @@ import Profile from "../Pages/Profile/Profile";
         },
         {
           path: "/about",
-          element: <PrivetRoute><About></About></PrivetRoute>,
+          element:<About></About>,
         },
         {
           path: "/update",
@@ -48,6 +49,11 @@ import Profile from "../Pages/Profile/Profile";
         {
           path: "/user",
           element: <PrivetRoute><Profile></Profile></PrivetRoute>
+        },
+        {
+          path: "/blog",
+          loader: () => fetch('/blog.json'),
+          element: <Blogs></Blogs>,
         }
       ]
     },

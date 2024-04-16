@@ -1,0 +1,44 @@
+[
+      {
+        "id": 1,
+        "image": "https://example.com/blog/image1.jpg",
+        "writer": "John Doe",
+        "date": "2024-04-17",
+        "title": "5 Tips for Finding Your Dream Home",
+        "description": "Looking for your dream home can be a daunting task, but with these five tips, you'll be well on your way to finding the perfect place to call home. From setting a budget to considering location and amenities, we've got you covered."
+      },
+      {
+        "id": 2,
+        "image": "https://example.com/blog/image2.jpg",
+        "writer": "Jane Smith",
+        "date": "2024-04-15",
+        "title": "The Importance of Home Inspections",
+        "description": "Home inspections are a crucial step in the home buying process. In this blog post, we'll discuss why home inspections are important, what to expect during the inspection, and how to interpret the results."
+      },
+      {
+        "id": 3,
+        "image": "https://example.com/blog/image3.jpg",
+        "writer": "Michael Johnson",
+        "date": "2024-04-12",
+        "title": "Decorating Tips for Small Spaces",
+        "description": "Living in a small space doesn't mean you have to sacrifice style. In this blog post, we'll share decorating tips and tricks to make the most of your small space, from clever storage solutions to space-saving furniture."
+      },
+      {
+        "id": 4,
+        "image": "https://example.com/blog/image4.jpg",
+        "writer": "Emily Wilson",
+        "date": "2024-04-10",
+        "title": "Understanding the Home Buying Process",
+        "description": "Buying a home is a big decision, and understanding the home buying process is essential. From getting pre-approved for a mortgage to closing on your new home, we'll guide you through each step of the process."
+      },
+      {
+        "id": 5,
+        "image": "https://example.com/blog/image5.jpg",
+        "writer": "David Brown",
+        "date": "2024-04-05",
+        "title": "Tips for Selling Your Home Quickly",
+        "description": "Selling your home can be a stressful experience, but with the right strategies, you can sell your home quickly and for the best possible price. In this blog post, we'll share tips for staging your home, pricing it right, and attracting buyers."
+      }
+]
+  
+  
