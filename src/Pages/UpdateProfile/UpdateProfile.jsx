@@ -8,7 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const UpdateProfile = () => {
-    const {updateUser} = useContext(AuthContext);
+    const {updateUser, user} = useContext(AuthContext);
     useEffect(()=>{
         document.title= 'profile update'
     },[]);
@@ -21,10 +21,10 @@ const UpdateProfile = () => {
       const onSubmit = (data) => {
         updateUser(data.name, data.photo, data.email)
         .then(() => {
-            toast.success("Success Notification !");
-          }).catch((error) => {
-            // An error occurred
-            // ...
+            toast.success("Success Notification !", {
+                position: "top-center",
+              });
+          }).catch(() => {
           });
       }
   return (
@@ -51,36 +51,39 @@ const UpdateProfile = () => {
                       <span className="label-text text-xl font-medium">Name</span>
                     </label>
                     <input
+                    defaultValue={user.displayName}
                       type="name"
                       placeholder="Enter Your Name"
                       className="input input-bordered"
                       {...register("name", { required: true })} 
                     />
-                    {errors.name && <span>This field is required</span>}
+                    {errors.name && <span className=" text-red-300">This field is required</span>}
                   </div>
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text text-xl font-medium">Email</span>
                     </label>
                     <input
+                    defaultValue={user.email}
                       type="email"
                       placeholder="Enter Your Email"
                       className="input input-bordered"
                       {...register("email", { required: true })} 
                     />
-                    {errors.email && <span>This field is required</span>}
+                    {errors.email && <span className=" text-red-300">This field is required</span>}
                   </div>
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text text-xl font-medium">PhotoURL</span>
                     </label>
                     <input
+                    defaultValue={user.photoURL}
                       type="url"
                       placeholder="Enter Photo URL"
                       className="input input-bordered"
                       {...register("photo", { required: true })} 
                     />
-                    {errors.photo && <span>This field is required</span>}
+                    {errors.photo && <span className=" text-red-300">This field is required</span>}
                   </div>
                   <div className="form-control mt-6">
                     <button className="btn bg-orange-400 text-xl text-white">Update</button>

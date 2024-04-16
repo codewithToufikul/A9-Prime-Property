@@ -8,7 +8,7 @@ const Navbar = () => {
     const navLink = <>
         <li><NavLink className={({ isActive, isPending }) =>
                       isActive
-                        ? " text-orange-500 border-2 border-orange-500 mr-3 font-bold shadow-xl"
+                        ? " text-orange-500 border-2 border-orange-500 border-b-4 border-0 mr-3 font-bold shadow-xl"
                         : isPending
                         ? "pending"
                         : "border-2 mr-3 "
@@ -16,7 +16,7 @@ const Navbar = () => {
         {
           user ? <li><NavLink className={({ isActive, isPending }) =>
           isActive
-            ? "text-orange-500 border-2 mr-3 border-orange-500 bg-transparent font-bold shadow-xl"
+            ? "text-orange-500 border-2 mr-3 border-b-4 border-0 border-orange-500 bg-transparent font-bold shadow-xl"
             : isPending
             ? "pending"
             : "border-2 mr-3"
@@ -25,15 +25,15 @@ const Navbar = () => {
         {
           user ? <li><NavLink className={({ isActive, isPending }) =>
           isActive
-            ? "text-orange-500 border-2 mr-3 border-orange-500 bg-transparent font-bold shadow-xl"
+            ? "text-orange-500 border-2 mr-3 border-orange-500 border-b-4 border-0 bg-transparent font-bold shadow-xl"
             : isPending
             ? "pending"
             : "border-2 mr-3"
-        } to="user">Profile</NavLink></li> : ''
+        } to="/user">Profile</NavLink></li> : ''
         }
         <li><NavLink className={({ isActive, isPending }) =>
                       isActive
-                        ? "text-orange-500 border-2 mr-3 border-orange-500 bg-transparent font-bold shadow-xl"
+                        ? "text-orange-500 border-2 mr-3 border-b-4 border-0 border-orange-500 bg-transparent font-bold shadow-xl"
                         : isPending
                         ? "pending"
                         : "border-2 mr-3"
@@ -43,9 +43,7 @@ const Navbar = () => {
     const handleLogOut = () =>{
       logOutUser()
       .then(() => {
-        // Sign-out successful.
-      }).catch((error) => {
-        // An error happened.
+      }).catch(() => {
       });
     }
   return (
@@ -99,10 +97,7 @@ const Navbar = () => {
             
           </ul>
           </div>
-          <a onClick={handleLogOut} data-aos="fade-left"
-          data-aos-easing="ease-in-back"
-          data-aos-delay="300"
-          data-aos-offset="0" className="btn  bg-orange-500 border-none text-lg md:text-xl text-white "><Link >LogOut</Link></a>
+          <a onClick={handleLogOut} className="btn  bg-orange-500 border-none text-lg md:text-xl text-white "><Link >LogOut</Link></a>
           </div> 
           : <a data-aos="fade-left"
           data-aos-easing="ease-in-back"

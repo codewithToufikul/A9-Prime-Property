@@ -10,6 +10,7 @@ import Register from "../Pages/Register";
 import About from "../Pages/About/About";
 import PrivetRoute from "../Pages/PrivetRoute/PrivetRoute";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
+import Profile from "../Pages/Profile/Profile";
 
 
   const router = createBrowserRouter([
@@ -43,6 +44,10 @@ import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
         {
           path: "/update",
           element: <PrivetRoute><UpdateProfile></UpdateProfile></PrivetRoute>
+        },
+        {
+          path: "/user",
+          element: <PrivetRoute><Profile></Profile></PrivetRoute>
         }
       ]
     },

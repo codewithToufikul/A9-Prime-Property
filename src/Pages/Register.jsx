@@ -1,16 +1,17 @@
 import Navbar from "./Shared/Navbar";
-import { FaGoogle, FaGithub  } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [passError, setPassError] = useState('')
   const {creatUser, updateUser} = useContext(AuthContext);
   const [show, setShow] = useState(false);
+  const navigete = useNavigate()
     useEffect(()=>{
         document.title= 'Register'
     },[])
@@ -36,11 +37,11 @@ const Register = () => {
         return;
       }
       creatUser(data.email, data.password)
-      .then(result=>{
+      .then(()=>{
         setPassError('')
         updateUser(data.fullName, data.photoUrl)
         .then(() => {
-
+          navigete("/")
         }).catch((error) => {
           console.error(error);
         });
