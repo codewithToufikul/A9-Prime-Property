@@ -20,6 +20,13 @@ const Navbar = () => {
                         ? "pending"
                         : "border-2 mr-3 "
                     } to="/blog">Blog</NavLink></li> 
+        <li><NavLink className={({ isActive, isPending }) =>
+                      isActive
+                        ? "text-orange-500 border-2 mr-3 border-b-4 border-0 border-orange-500 bg-transparent font-bold shadow-xl"
+                        : isPending
+                        ? "pending"
+                        : "border-2 mr-3"
+                    } to="/about">About Us</NavLink></li>
         {
           user ? <li><NavLink className={({ isActive, isPending }) =>
           isActive
@@ -38,13 +45,7 @@ const Navbar = () => {
             : "border-2 mr-3"
         } to="/user">Profile</NavLink></li> : ''
         }
-        <li><NavLink className={({ isActive, isPending }) =>
-                      isActive
-                        ? "text-orange-500 border-2 mr-3 border-b-4 border-0 border-orange-500 bg-transparent font-bold shadow-xl"
-                        : isPending
-                        ? "pending"
-                        : "border-2 mr-3"
-                    } to="/about">About Us</NavLink></li>
+        
     
     </>
     const handleLogOut = () =>{

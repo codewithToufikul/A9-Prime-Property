@@ -1,44 +1,42 @@
 [
-      {
-        "id": 1,
-        "image": "https://example.com/blog/image1.jpg",
-        "writer": "John Doe",
-        "date": "2024-04-17",
-        "title": "5 Tips for Finding Your Dream Home",
-        "description": "Looking for your dream home can be a daunting task, but with these five tips, you'll be well on your way to finding the perfect place to call home. From setting a budget to considering location and amenities, we've got you covered."
-      },
-      {
-        "id": 2,
-        "image": "https://example.com/blog/image2.jpg",
-        "writer": "Jane Smith",
-        "date": "2024-04-15",
-        "title": "The Importance of Home Inspections",
-        "description": "Home inspections are a crucial step in the home buying process. In this blog post, we'll discuss why home inspections are important, what to expect during the inspection, and how to interpret the results."
-      },
-      {
-        "id": 3,
-        "image": "https://example.com/blog/image3.jpg",
-        "writer": "Michael Johnson",
-        "date": "2024-04-12",
-        "title": "Decorating Tips for Small Spaces",
-        "description": "Living in a small space doesn't mean you have to sacrifice style. In this blog post, we'll share decorating tips and tricks to make the most of your small space, from clever storage solutions to space-saving furniture."
-      },
-      {
-        "id": 4,
-        "image": "https://example.com/blog/image4.jpg",
-        "writer": "Emily Wilson",
-        "date": "2024-04-10",
-        "title": "Understanding the Home Buying Process",
-        "description": "Buying a home is a big decision, and understanding the home buying process is essential. From getting pre-approved for a mortgage to closing on your new home, we'll guide you through each step of the process."
-      },
-      {
-        "id": 5,
-        "image": "https://example.com/blog/image5.jpg",
-        "writer": "David Brown",
-        "date": "2024-04-05",
-        "title": "Tips for Selling Your Home Quickly",
-        "description": "Selling your home can be a stressful experience, but with the right strategies, you can sell your home quickly and for the best possible price. In this blog post, we'll share tips for staging your home, pricing it right, and attracting buyers."
-      }
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/GTv7KHb/gustavo-zambelli-n-Evz-SXBIhi-U-unsplash-1.jpg",
+    "writer": "John Doe",
+    "date": "2024-04-17",
+    "title": "5 Tips for Finding Your Dream Home",
+    "description": "Looking for your dream home? With these five tips, you'll be on your way to finding the perfect place. From setting a budget to considering location and amenities, we've got you covered. Explore now and embark on the journey to your dream abode. Whether it's a cozy cottage or a modern urban loft, these tips will help you navigate the housing market and find the home that's right for you. Don't let the process overwhelm you; with the right guidance, you'll soon be unlocking the door to your dream home."
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/r0D44VY/frames-for-your-heart-2d4l-AQAlb-DA-unsplash-1.jpg",
+    "writer": "Jane Smith",
+    "date": "2024-04-15",
+    "title": "The Importance of Home Inspections",
+    "description": "Home inspections are crucial in the buying process. We'll discuss why they're important, what to expect, and how to interpret the results. Learn about the significance of this step and ensure you make informed decisions when purchasing your home. A thorough inspection can uncover hidden issues and save you from costly surprises down the road. By understanding the inspection process and its outcomes, you'll be equipped to move forward with confidence in your home buying journey."
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/tmLxS1t/frames-for-your-heart-vb-SRUr-Nm3-Ik-unsplash-1.jpg",
+    "writer": "Michael Johnson",
+    "date": "2024-04-12",
+    "title": "Decorating Tips for Small Spaces",
+    "description": "Living small doesn't mean sacrificing style. We'll share decorating tips, from storage solutions to space-saving furniture. Discover creative ways to maximize your space and create a cozy and functional environment in even the smallest of living areas. With the right design choices and organizational strategies, you can make every square foot count and transform your compact space into a stylish retreat that reflects your personality and meets your practical needs."
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/J3dJbLR/dillon-kydd-2ke-CPb73a-QY-unsplash-1.jpg",
+    "writer": "Emily Wilson",
+    "date": "2024-04-10",
+    "title": "Understanding the Home Buying Process",
+    "description": "Buying a home is a big decision. We'll guide you through each step, from getting pre-approved to closing. Gain insights into the intricate process of purchasing a home and ensure a smooth and informed journey towards owning your dream property. With expert advice and practical tips, you'll navigate the complexities of the real estate market with confidence and make sound decisions that align with your financial goals and lifestyle preferences."
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/N1fhs4R/istrfry-marcus-g3-L4u-Uf-DQdg-unsplash-1.jpg",
+    "writer": "David Brown",
+    "date": "2024-04-05",
+    "title": "Tips for Selling Your Home Quickly",
+    "description": "Selling your home? We'll share strategies for a quick sale and the best price. From staging to pricing and attracting buyers. Learn how to expedite the selling process and maximize the value of your property in today's competitive real estate market. With insider tips and proven techniques, you'll showcase your home in its best light and appeal to potential buyers, resulting in a swift and successful sale that meets your objectives and exceeds your expectations."
+  }
 ]
-  
-  

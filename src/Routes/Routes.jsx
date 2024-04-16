@@ -53,7 +53,7 @@ import Blogs from "../Pages/Blogs/Blogs";
         {
           path: "/blog",
           loader: () => fetch('/blog.json'),
-          element: <Blogs></Blogs>,
+          element: <PrivetRoute><Blogs></Blogs></PrivetRoute>,
         }
       ]
     },
