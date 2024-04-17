@@ -5,8 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../Provider/AuthProvider";
 import 'animate.css';
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { FaEye } from "react-icons/fa";
@@ -15,7 +14,7 @@ import { FaEyeSlash } from "react-icons/fa6";
 const Login = () => {
   const {loginUser, googleLogin, githubLogin} = useContext(AuthContext);
   const location = useLocation();
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const navigete = useNavigate();
     useEffect(()=>{
         document.title= 'Login'
@@ -30,10 +29,11 @@ const Login = () => {
       loginUser(data.email, data.password)
 
       .then(()=>{
-        navigete(location?.state ? location.state : '/')
         toast.success("Login Success",{
           position: "top-center",
         });
+        navigete(location?.state ? location.state : '/')
+        
       })
       .catch(error=>{
         console.log(error);
@@ -45,10 +45,11 @@ const Login = () => {
     const handleGoogleLogin = () =>{
       googleLogin()
       .then(()=>{
-        navigete(location?.state ? location.state : '/')
         toast.success("Login Success",{
           position: "top-center",
         });
+        navigete(location?.state ? location.state : '/')
+        
       })
       .catch(error=>{
         console.error(error);
@@ -57,10 +58,11 @@ const Login = () => {
     const handleGithubLogin = () =>{
       githubLogin()
       .then(()=>{
-        navigete(location?.state ? location.state : '')
         toast.success("Login Success",{
           position: "top-center",
         });
+        navigete(location?.state ? location.state : '')
+        
       })
       .catch((error)=>{
         toast.error(error.massage, {
@@ -98,12 +100,7 @@ const Login = () => {
                 <p onClick={handlePasswordShow} className={`absolute top-3 right-3 text-2xl ${!show ? 'hidden' : ''}`}><FaEyeSlash /></p>
           </div>
           {errors.password && <span>This field is required</span>}
-          <label className="label">
-            <div className=" flex items-center gap-1">
-            <input type="checkbox" name="check" id="" />
-            <p className="">Remember Me!</p>
-            </div>
-          </label>
+          
         </div>
         <div className="form-control mt-6">
           <button className="animate__animated animate__flipInX btn bg-orange-500 border-none text-xl text-white">Login</button>
@@ -131,7 +128,7 @@ const Login = () => {
         </div>
         <p className=" mt-6 text-base text-center">Don`t have an account ! <Link to="/register" className=" text-orange-500">Register here...</Link></p>
       </div>
-      <ToastContainer />
+      
     </div>
   );
 };

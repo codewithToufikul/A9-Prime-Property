@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Navbar from "../Shared/Navbar";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Footer from "../Footer/Footer";
@@ -11,6 +11,9 @@ const Profile = () => {
         loop: 100,
         onLoopDone: () => console.log(`loop completed after 3 runs.`)
       })
+      useEffect(()=>{
+        document.title= 'Profile'
+    },[])
     return (
         <div>
             <div className="">
@@ -22,7 +25,7 @@ const Profile = () => {
                 <img className=" w-full rounded-full" src={user.photoURL} alt="" />
                 </div>
                 <div className=" space-y-3">
-                    <h1 className=" text-3xl font-semibold text-orange-400">Name: <span className=" text-black font-normal">{text}</span>
+                    <h1 className=" text-2xl md:text-3xl font-semibold text-orange-400">Name: <span className=" text-black font-normal">{text}</span>
                     <Cursor cursorColor='orange' />
                     </h1>
                     <h1 className=" text-lg"><span className=" text-xl font-semibold text-orange-400">Email:</span> {user.email}</h1>

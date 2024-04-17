@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <>
     <div className="bg-gray-100 pt-8">
-      <div className="max-w-[1440px] px-4 sm:px-6 text-gray-800 grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
+      <div className="max-w-[1440px] px-4 sm:px-6 text-gray-800 grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 mx-auto">
         <div className="p-5">
           <h3 className="font-bold text-xl text-indigo-600">Company Name</h3>
           <img className=" mt-5" src={logo} alt="" />
@@ -27,7 +27,7 @@ const Footer = () => {
           <div className="text-sm uppercase text-indigo-600 font-bold">Contact us</div>
           <a className="my-3 block" href="/#">123 Ocean Drive, Miami, FL 33139<span className="text-teal-600 text-xs p-1"></span></a>
           <a className="my-3 block" >Phone: xxx 555-6789<span className="text-teal-600 text-xs p-1"></span></a>
-          <a className="my-3 block" >primepropety@yahoo.com <span className="text-teal-600 text-xs p-1"></span></a>
+          <a className="my-3 " >primepropety@yahoo.com <span className="text-teal-600 text-xs p-1"></span></a>
         </div>
       </div>
     </div>

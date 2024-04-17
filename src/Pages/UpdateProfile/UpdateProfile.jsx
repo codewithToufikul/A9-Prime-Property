@@ -34,15 +34,15 @@ const UpdateProfile = () => {
         <Navbar></Navbar>
       </div>
       <div className=" text-center mt-6 " data-aos="flip-up">
-        <h1 className=" text-5xl">Update <span className=" font-medium text-orange-300">Your Profile</span></h1>
+        <h1 className=" text-3xl md:text-5xl">Update <span className=" font-medium text-orange-300">Your Profile</span></h1>
       </div>
-      <div className=" max-w-[1440px] mx-auto grid grid-cols-2 justify-center
+      <div className=" max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 justify-center
        items-center">
-        <div data-aos="fade-right">
+        <div className=" hidden md:block" data-aos="fade-right">
           <img src={profile} alt="" />
         </div>
         <div data-aos="fade-left">
-          <div className="mx-10 ">
+          <div className="lg:mx-10 md:mx-5 m-5">
             <div className="">
               
               <div className="card shadow-2xl  bg-base-100">

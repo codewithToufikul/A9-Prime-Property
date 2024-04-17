@@ -6,11 +6,12 @@ import { useForm } from "react-hook-form";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
   const [passError, setPassError] = useState('')
   const {creatUser, updateUser} = useContext(AuthContext);
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const navigete = useNavigate()
     useEffect(()=>{
         document.title= 'Register'
@@ -24,7 +25,7 @@ const Register = () => {
   
     const onSubmit = (data) => {
       console.log(data);
-      if(data.password.length <= 6){
+      if(data.password.length < 6){
         setPassError('please provide more then 6 character password');
         return;
     }
@@ -32,7 +33,7 @@ const Register = () => {
         setPassError('please must contain at least one uppercase letter')
         return;
       }
-      else if(!/[a-z]/.test(data.password)){
+      if(!/[a-z]/.test(data.password)){
         setPassError('please must contain at least one lowercase letter')
         return;
       }
@@ -41,7 +42,9 @@ const Register = () => {
         setPassError('')
         updateUser(data.fullName, data.photoUrl)
         .then(() => {
+          
           navigete("/")
+          toast("Wow so easy !")
         }).catch((error) => {
           console.error(error);
         });
@@ -61,7 +64,7 @@ const Register = () => {
           </div>
           <div className="max-w-[600px] m-auto glass p-10 lg:mt-20">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body p-0">
-              <h1 className="text-center text-4xl font-medium">Please <span className="text-orange-500">Register</span></h1>
+              <h1 className="animate__animated animate__bounce text-center text-4xl font-medium">Please <span className="text-orange-500">Register</span></h1>
               <div className="form-control">
                 <label className="label text-lg">Name</label>
                 <input type="name" placeholder="Enter Your Name" className="input input-bordered" {...register("fullName", { required: true })} />
@@ -90,11 +93,12 @@ const Register = () => {
                 }
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-orange-500 border-none text-xl text-white">Register</button>
+                <button className="animate__animated animate__flipInX btn bg-orange-500 border-none text-xl text-white">Register</button>
               </div>
             </form>
             <p className="mt-6 text-base text-center">Have an account! <Link to="/login" className="text-orange-500">Login here...</Link></p>
           </div>
+          <ToastContainer />
         </div>
       );
 };

@@ -5,7 +5,7 @@ import { FaChartArea } from "react-icons/fa";
 const Property = ({property}) => {
     const {id, estate_title, segment_name, description, price, status, area, location, facilities, image} = property;
   return (
-    <div className="card card-compact bg-base-100 shadow-xl" data-aos="fade-left" data-aos-delay="300">
+    <div className="card card-compact bg-base-100 shadow-xl" data-aos="fade-left" data-aos-delay="150">
       <figure className="p-3 relative">
         <img
         className=" min-w-full h-[250px] rounded-xl"

@@ -6,7 +6,7 @@ const ErrorPage = () => {
         document.title= 'page not found'
     },[])
     return (
-        <div className=' flex justify-center items-center flex-col'>
+        <div className='min-h-screen flex justify-center items-center flex-col'>
 
             <img src={error} alt="" />
             <h1 className=' text-xl'>Go to <Link className=' font-bold text-orange-400 underline' to="/">Home</Link></h1>
