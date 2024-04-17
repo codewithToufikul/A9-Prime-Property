@@ -14,7 +14,7 @@ const PropertyDetails = () => {
     const property = propertys.find(property => property.id == id);
     const {estate_title, segment_name, description, price, status, area, location, facilities, image} = property;
     return (
-        <div>
+        <div className=" overflow-x-hidden">
             <div className=" md:h-[100px] h-[70px] "><Navbar></Navbar></div>
             <div className="max-w-[1440px] mx-auto">
             <div className="hero h-[400px] rounded-3xl" style={{backgroundImage: `url(${image})`}}>

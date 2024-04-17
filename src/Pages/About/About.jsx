@@ -11,7 +11,7 @@ const About = () => {
       <div className="  md:h-[100px] h-[70px]">
         <Navbar></Navbar>
       </div>
-      <div className=" px-2 md:min-h-screen max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 justify-center items-center">
+      <div className=" px-2 md:min-h-screen max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 justify-center items-center">
         <div className="">
           <img className="" src={about} alt="" />
         </div>

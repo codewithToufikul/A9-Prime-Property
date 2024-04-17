@@ -22,7 +22,7 @@ const UpdateProfile = () => {
       const onSubmit = (data) => {
         updateUser(data.name, data.photo, data.email)
         .then(() => {
-            toast.success("Success Notification !", {
+            toast.success("Profile Update Successfully!", {
                 position: "top-center",
               });
           }).catch(() => {

@@ -36,13 +36,13 @@ const Navbar = () => {
         } to="/update">Update Profile</NavLink></li>  : ''
         }
         {
-          user ? <li><NavLink className={({ isActive, isPending }) =>
+          <li><NavLink className={({ isActive, isPending }) =>
           isActive
             ? "text-orange-500 border-2 mr-3 border-orange-500 border-b-4 border-0 bg-transparent font-bold shadow-xl"
             : isPending
             ? "pending"
             : "border-2 mr-3"
-        } to="/user">Profile</NavLink></li> : ''
+        } to="/user">Profile</NavLink></li>
         }
         <li><NavLink className={({ isActive, isPending }) =>
                       isActive

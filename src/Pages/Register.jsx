@@ -6,7 +6,8 @@ import { useForm } from "react-hook-form";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
   const [passError, setPassError] = useState('')
@@ -42,9 +43,10 @@ const Register = () => {
         setPassError('')
         updateUser(data.fullName, data.photoUrl)
         .then(() => {
-          
+          toast.success("Login Success",{
+            position: "top-center",
+          });
           navigete("/")
-          toast("Wow so easy !")
         }).catch((error) => {
           console.error(error);
         });
@@ -98,7 +100,6 @@ const Register = () => {
             </form>
             <p className="mt-6 text-base text-center">Have an account! <Link to="/login" className="text-orange-500">Login here...</Link></p>
           </div>
-          <ToastContainer />
         </div>
       );
 };

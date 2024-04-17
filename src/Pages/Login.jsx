@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../Provider/AuthProvider";
 import 'animate.css';
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { FaEye } from "react-icons/fa";
@@ -61,7 +62,7 @@ const Login = () => {
         toast.success("Login Success",{
           position: "top-center",
         });
-        navigete(location?.state ? location.state : '')
+        navigete(location?.state ? location.state : '/')
         
       })
       .catch((error)=>{

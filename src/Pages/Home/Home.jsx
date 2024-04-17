@@ -10,6 +10,7 @@ import Footer from "../Footer/Footer";
 import { useEffect } from "react";
 import { FaFacebook } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
+import CommonQs from "../CommonQs/CommonQs";
 
 
 
@@ -42,7 +43,7 @@ const Home = () => {
         <div className=" grid grid-cols-1 md:grid-cols-3 gap-10">
             <div>
                 <img className=" rounded-2xl" src={'https://i.ibb.co/zXc3mCB/linkedin-sales-solutions-p-At-A8xe-i-VM-unsplash-1.jpg'} alt="" />
-                <h1 className=" text-3xl font-medium">Nathan Thompson</h1>
+                <h1 className=" text-2xl lg:text-3xl font-medium">Nathan Thompson</h1>
                 <p className=" text-xl">CEO</p>
                 <div className=" gap-3 flex">
                     <h1>Contract:</h1>
@@ -55,7 +56,7 @@ const Home = () => {
             </div>
             <div>
                 <img className=" rounded-2xl" src={'https://i.ibb.co/FDvqpwY/meritt-thomas-ao-Q4-DYZLE-E-unsplash-1.jpg'} alt="" />
-                <h1 className=" text-3xl font-medium"> Emily Anderson</h1>
+                <h1 className=" text-2xl lg:text-3xl font-medium"> Emily Anderson</h1>
                 <p className=" text-xl">Leed Interior Design</p>
                 <div className=" gap-3 flex">
                     <h1>Contract:</h1>
@@ -67,7 +68,7 @@ const Home = () => {
             </div>
             <div>
                 <img className=" rounded-2xl" src={'https://i.ibb.co/xhcvsfc/janko-ferlic-G-jo31-ESu-RE-unsplash-1.jpg'} alt="" />
-                <h1 className=" text-3xl font-medium">Ryan Mitchell</h1>
+                <h1 className="text-2xl lg:text-3xl font-medium">Ryan Mitchell</h1>
                 <p className=" text-xl">Co Founder</p>
                 <div className=" gap-3 flex">
                     <h1>Contract:</h1>
@@ -78,6 +79,10 @@ const Home = () => {
                 </div>
             </div>
         </div>
+        </div>
+        <div className=" mt-12 md:mt-24">
+            <h1 className="text-center md:text-4xl text-3xl lg:text-5xl">Common <span className=" font-semibold text-orange-400">Question</span></h1>
+            <CommonQs></CommonQs>
         </div>
         </div>
         
