@@ -40,9 +40,9 @@ const Home = () => {
         </div>
         <div className=" mt-24">
         <h1 className=" text-3xl md:text-5xl text-center mb-14">Our <span className=" font-semibold text-orange-400">Team</span></h1>
-        <div className=" grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div>
-                <img className=" rounded-2xl" src={'https://i.ibb.co/zXc3mCB/linkedin-sales-solutions-p-At-A8xe-i-VM-unsplash-1.jpg'} alt="" />
+        <div className=" grid grid-cols-1 md:grid-cols-3 md:gap-5 gap2 lg:gap-10">
+            <div className="">
+                <img className=" h-2/3 w-full rounded-2xl" src={'https://i.ibb.co/zXc3mCB/linkedin-sales-solutions-p-At-A8xe-i-VM-unsplash-1.jpg'} alt="" />
                 <h1 className=" text-2xl lg:text-3xl font-medium">Nathan Thompson</h1>
                 <p className=" text-xl">CEO</p>
                 <div className=" gap-3 flex">
@@ -55,7 +55,7 @@ const Home = () => {
                 </div>
             </div>
             <div>
-                <img className=" rounded-2xl" src={'https://i.ibb.co/FDvqpwY/meritt-thomas-ao-Q4-DYZLE-E-unsplash-1.jpg'} alt="" />
+                <img className=" h-2/3 w-full rounded-2xl" src={'https://i.ibb.co/FDvqpwY/meritt-thomas-ao-Q4-DYZLE-E-unsplash-1.jpg'} alt="" />
                 <h1 className=" text-2xl lg:text-3xl font-medium"> Emily Anderson</h1>
                 <p className=" text-xl">Leed Interior Design</p>
                 <div className=" gap-3 flex">
@@ -67,7 +67,7 @@ const Home = () => {
                 </div>
             </div>
             <div>
-                <img className=" rounded-2xl" src={'https://i.ibb.co/xhcvsfc/janko-ferlic-G-jo31-ESu-RE-unsplash-1.jpg'} alt="" />
+                <img className=" h-2/3 w-full rounded-2xl" src={'https://i.ibb.co/xhcvsfc/janko-ferlic-G-jo31-ESu-RE-unsplash-1.jpg'} alt="" />
                 <h1 className="text-2xl lg:text-3xl font-medium">Ryan Mitchell</h1>
                 <p className=" text-xl">Co Founder</p>
                 <div className=" gap-3 flex">

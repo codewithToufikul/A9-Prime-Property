@@ -21,7 +21,7 @@ const Profile = () => {
             </div>
             <div className=" max-w-[1440px] mx-auto">
                 <div className=" flex flex-col justify-center items-center gap-3 h-screen">
-                <div data-aos="fade-down" className=" w-[200px] border-4 rounded-full border-orange-400">
+                <div  className=" w-[200px] border-4 rounded-full border-orange-400">
                 <img className=" w-full rounded-full" src={user.photoURL} alt="" />
                 </div>
                 <div className=" space-y-3">

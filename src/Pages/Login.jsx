@@ -53,7 +53,9 @@ const Login = () => {
         
       })
       .catch(error=>{
-        console.error(error);
+        toast.error(error.massage, {
+          position: "top-center",
+        });
       })
     }
     const handleGithubLogin = () =>{

@@ -41,18 +41,23 @@ const Register = () => {
       creatUser(data.email, data.password)
       .then(()=>{
         setPassError('')
+        toast.success("Register Success",{
+          position: "top-center",
+        });
+        navigete("/")
         updateUser(data.fullName, data.photoUrl)
         .then(() => {
-          toast.success("Login Success",{
+        }).catch((error) => {
+          console.log(error);
+          toast.error(error.message, {
             position: "top-center",
           });
-          navigete("/")
-        }).catch((error) => {
-          console.error(error);
         });
       })
       .catch(error=>{
-        console.error(error);
+        toast.error(error.message, {
+          position: "top-center",
+        });
       })
     }
     const handlePasswordShow = () =>{
